@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Social - Fallout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>IPSLON</h1>
+        <button id="addPostBtn">+</button>
+    </header>
+
+    <!-- Pop-up para adicionar novo post -->
+    <div id="postPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup">&times;</span>
+            <h2>Novo Post</h2>
+            <form id="postForm">
+                <input type="text" id="postTitle" placeholder="Título" required>
+                <textarea id="postMessage" placeholder="Mensagem"></textarea>
+                <input type="file" id="postImage" accept="image/*">
+                <button type="submit">Postar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Timeline com ASCII inicial -->
+    <main id="timeline">
+        <pre id="asciiPlaceholder" class="ascii-center">
+
+                                                 ,--,                                 
+                     ,-.----.                 ,---.'|        ,----..             ,--. 
+               ,---, \    /  \     .--.--.    |   | :       /   /   \          ,--.'| 
+            ,`--.' | |   :    \   /  /    '.  :   : |      /   .     :     ,--,:  : | 
+            |   :  : |   |  .\ : |  :  /`. /  |   ' :     .   /   ;.  \ ,`--.'`|  ' : 
+            :   |  ' .   :  |: | ;  |  |--`   ;   ; '    .   ;   /  ` ; |   :  :  | | 
+            |   :  | |   |   \ : |  :  ;_     '   | |__  ;   |  ; \ ; | :   |   \ | : 
+            '   '  ; |   : .   /  \  \    `.  |   | :.'| |   :  | ; | ' |   : '  '; | 
+            |   |  | ;   | |`-'    `----.   \ '   :    ; .   |  ' ' ' : '   ' ;.    ; 
+            '   :  ; |   | ;       __ \  \  | |   |  ./  '   ;  \; /  | |   | | \   | 
+            |   |  ' :   ' |      /  /`--'  / ;   : ;     \   \  ',  /  '   : |  ; .' 
+            '   :  | :   : :     '--'.     /  |   ,/       ;   :    /   |   | '`--'   
+            ;   |.'  |   | :       `--'---'   '---'         \   \ .'    '   : |       
+            '---'    `---'.|                                 `---`      ;   |.'       
+                       `---`                                            '---'         
+
+
+        </pre>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
