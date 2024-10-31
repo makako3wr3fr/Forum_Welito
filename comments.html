@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Comentários do Post</h1>
+        <a href="index.html" class="back-btn">Voltar</a>
+    </header>
+
+    <main id="comments-section">
+        <section class="post">
+            <h3>@nickname</h3>
+            <h4>Título do Post</h4>
+            <p class="post-content">Conteúdo do post</p>
+            <div class="post-footer">
+                <button class="like-btn" onclick="animateButton(this)">👍</button>
+                <button class="dislike-btn" onclick="animateButton(this)">👎</button>
+            </div>
+        </section>
+
+        <section id="comment-input">
+            <textarea placeholder="Escreva seu comentário..." rows="3"></textarea>
+            <button onclick="submitComment()">Enviar</button>
+        </section>
+
+        <section id="comments-list">
+            <div class="comment">
+                <p><strong>@comentador1:</strong> Gostei desse post!</p>
+            </div>
+            <div class="comment">
+                <p><strong>@comentador2:</strong> Muito interessante!</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
