@@ -115,12 +115,22 @@ form button {
     color: #00ff00;
 }
 
+/* Título do post com maior destaque */
+.post h4 {
+    color: #00ff00;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
 .post-content {
     margin: 10px 0;
 }
 
 /* Aparência estilo terminal para os botões */
 button.like-btn, button.dislike-btn, .comment-btn {
+    display: inline-flex;
+    align-items: center;
     background: none;
     border: 2px solid #00ff00;
     padding: 5px 10px;
@@ -135,10 +145,6 @@ button.like-btn:hover, button.dislike-btn:hover, .comment-btn:hover {
     background-color: #00ff00;
 }
 
-button.like-btn:active, button.dislike-btn:active {
-    transform: scale(1.1);
-}
-
 /* Animação de pulsação para clique */
 @keyframes pulse {
     0% { transform: scale(1); }
@@ -151,12 +157,9 @@ button.like-btn.clicked, button.dislike-btn.clicked {
     border-color: #00ff00;
 }
 
-/* Botão para voltar na página de comentários */
-.back-btn {
+/* Contadores de curtidas e deslikes */
+.like-count, .dislike-count {
+    margin-left: 5px;
+    font-weight: bold;
     color: #00ff00;
-    border: 2px solid #00ff00;
-    padding: 5px 10px;
-    text-decoration: none;
-    font-size: 1em;
-    cursor: pointer;
 }
