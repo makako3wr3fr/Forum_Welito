@@ -28,6 +28,13 @@ function animateButton(button) {
     }, 300);
 }
 
+// Função para incrementar curtidas e deslikes
+function updateCount(button, countDisplay) {
+    const currentCount = parseInt(countDisplay.innerText);
+    countDisplay.innerText = currentCount + 1;
+    animateButton(button);
+}
+
 // Postar e exibir na timeline
 postForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -50,8 +57,12 @@ postForm.addEventListener('submit', (e) => {
         <p class="post-content">${postMessage}</p>
         ${postImage ? `<img src="${URL.createObjectURL(postImage)}" alt="Post Image" style="width: 100%; margin-top: 10px;">` : ''}
         <div class="post-footer">
-            <button class="like-btn" onclick="animateButton(this)">👍</button>
-            <button class="dislike-btn" onclick="animateButton(this)">👎</button>
+            <button class="like-btn" onclick="updateCount(this, this.querySelector('.like-count'))">
+                👍 <span class="like-count">0</span>
+            </button>
+            <button class="dislike-btn" onclick="updateCount(this, this.querySelector('.dislike-count'))">
+                👎 <span class="dislike-count">0</span>
+            </button>
             <a href="comments.html" class="comment-btn">💬 Comentários</a>
         </div>
     `;
